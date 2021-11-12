@@ -1,26 +1,21 @@
-package com.xworkz.hajama;
-import com.xworkz.hajama.Fish;
-import com.xworkz.hajama.GoldFish;
-import com.xworkz.hajama.SharkFish;
+package com.xworkz.festival.company;
 
 public class FishStarter {
 
 	public static void main(String[] args) {
-		Fish fish=new Fish();
-		System.out.println(fish.alive);
-		System.out.println(fish.region);
-		
-	SharkFish  sharkfish=new SharkFish () ;
-		System.out.println( sharkfish.height);
-		System.out.println( sharkfish.weight);
-		
-		GoldFish goldfish=new GoldFish();
-		System.out.println(goldfish.colour);
-		System.out.println(goldfish.size);
-		
-		
-		
-
+	  Fish fe=new Fish();
+	  Fish f=new Fish();
+	  System.out.println(fe.hashCode());
+	  System.out.println(fe.toString());
+	  
+     fe.setColour("white");
+     f.setColour("gold");
+     System.out.println(fe.equals(f));
+     
+     fe.setName("anjel");
+     f.setName("anjel");
+     System.out.println(fe.equals(f));
+	 
 	}
 
 }

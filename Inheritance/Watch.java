@@ -1,13 +1,13 @@
 package com.xworkz.festival.company;
 
 public class Watch {
-	protected String colour;
-	protected String type;
-	protected int cost;
-	protected boolean good;
+	private String colour;
+	private String type;
+	private int cost;
+	private boolean good;
 
 
-   protected Watch() {
+  public Watch() {
 	   super();
 	   System.out.println("invoked no arg const");
    }
@@ -21,18 +21,38 @@ public class Watch {
    protected void showTime() {
 	   System.out.println("invoked showTime");
    }
-   
-   
+   @Override
+   public String toString() {
+		System.out.println("Invoked to String Method");
+		return super.toString();
+	};
 
-
-protected Watch(String colour, String type, int cost, boolean good) {
-	super();
-	this.colour = colour;
-	this.type = type;
-	this.cost = cost;
-	this.good = good;
+@Override
+public int hashCode() {
+	System.out.println("Invoked hashcode method");
+	return 1000;
 }
+@Override
+public boolean equals(Object obj) {
+	System.out.println("Invoked equals method");
+	if (obj == null) {
+		System.out.println("You have passed null value");
+		return false;	
+	}
+	
 
+if (obj instanceof Watch) {
+	System.out.println("Watch is  an instance of watch ");
+	Watch a = (Watch) obj;
+	System.out.println("Casted");
+	String storage = a.getColour();
+	if (this.colour.equals(storage)) {
+		System.out.println("colour have matched");
+		return true;
+	}
+}
+return false;
+}
 
 protected String getColour() {
 	return colour;

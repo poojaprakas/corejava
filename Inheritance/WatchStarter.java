@@ -1,14 +1,19 @@
 package com.xworkz.festival.company;
- import com.xworkz.festival.smallWatch;
+
 public class WatchStarter {
 
 	public static void main(String[] args) {
-	
-           smallWatch watch=new smallWatch("pink","ranstad",500,true);
-        	  watch.displayDetails(); 
-        	  System.out.println("invoked parameterised const");
-        	  watch.showTime();
+	     Watch wat=new Watch();
+	     Watch wat1=new Watch();
+	     System.out.println(wat.toString());
+	     System.out.println(wat.hashCode());
+	     
+	     wat.setCost(500);
+	     wat1.setCost(500);
+	     System.out.println(wat.equals(wat1));
+	     
            
+        
 	}
 
 }
