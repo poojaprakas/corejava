@@ -1,0 +1,3 @@
+ enum  Phonepay {
+   WORKING, NOTWORKING;
+ }
